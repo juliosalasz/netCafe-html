@@ -1,0 +1,572 @@
+:root {
+  --black: #333;
+  --darkGrey: #4b4b4d;
+  --grey: #777;
+  --green: #5e801e;
+  --aqua: #065a63;
+  --white: #fff;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+}
+
+/* This box class is purely used for explaining how the bootstrap grid system works. */
+.box {
+  background-color: lightblue;
+  border: 1px solid blue;
+  min-height: 50px;
+  font-size: 2rem;
+}
+
+/*Nav*/
+
+.logo-container {
+  width: 190px;
+  height: 38px;
+  display: block;
+}
+
+.logo-image {
+  width: 100%;
+}
+
+.btn-nav {
+  border: 1px solid var(--grey);
+  color: var(--grey);
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+/*header*/
+
+.header-back {
+  background-image: url(/assets/rentcafe.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-hero {
+  max-height: 540px;
+  display: inline-block;
+  top: 100px;
+  width: 75%;
+  max-width: 700px;
+  min-width: 300px;
+  padding: 4% 0 12%;
+}
+
+.home-title {
+  font-size: 74px;
+}
+
+.search-button {
+  background-color: #88c155;
+  padding-left: 30px;
+  padding-top: 12px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+/*main*/
+
+.section-title {
+  color: var(--grey);
+}
+
+.text-black {
+  color: var(--black);
+}
+.text-aqua {
+  color: var(--aqua);
+}
+.text-white {
+  color: var(--white);
+}
+.text-dark-grey {
+  color: var(--darkGrey);
+}
+.text-grey {
+  color: var(--grey);
+}
+
+.container-lg {
+  max-width: 1170px;
+  margin: 0 auto; /*make it centered*/
+}
+
+/* H responsive*/
+
+.h2-text {
+  font-size: 1.3rem;
+}
+
+/*Icon section*/
+.icon-house {
+  background-image: url(/assets/home-icons.gif);
+  background-position: -10px -172px;
+
+  width: 55px;
+  height: 57px;
+}
+
+.icon-calc {
+  background-image: url(/assets/home-icons.gif);
+  background-position: -114px -235px;
+  width: 50px;
+  height: 64px;
+}
+
+.icon-point {
+  background-image: url(/assets/home-icons.gif);
+  background-position: -199px -235px;
+  width: 50px;
+  height: 64px;
+}
+
+.icon-store {
+  background-image: url(/assets/home-icons.gif);
+  background-position: -268px -235px;
+  width: 66px;
+  height: 64px;
+}
+.icon-app {
+  background-image: url(/assets/home-icons.gif);
+  background-position: -85px -95px;
+  width: 54px;
+  height: 56px;
+}
+
+.icon-storage {
+  background-image: url(/assets/home-icons.gif);
+  background-position: -200px -86px;
+  width: 60px;
+  height: 51px;
+}
+
+.icon-search {
+  background-image: url(/assets/home-icons.gif);
+  background-position: -205px -10px;
+  width: 56px;
+  height: 56px;
+}
+
+.icon-rent {
+  background-image: url(/assets/find-apartments-icon-desktop.png);
+  width: 62px;
+  height: 57px;
+}
+
+/*Safest Way Section*/
+.btn-safest {
+  background-color: var(--green);
+  color: white;
+}
+
+.btn-safest:hover {
+  background-color: #8dc442;
+  color: white;
+}
+.tab-budget {
+  background-image: url(/assets/rent-calc.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.tab-near {
+  background-image: url(/assets/near-me.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+.tab-storage {
+  background-image: url(/assets/near-me-storage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/*Popular Cities*/
+
+.atlanta-card {
+  background-image: url(/assets/atlanta_ga.png);
+  background-size: cover;
+  color: white;
+}
+
+.austin-card {
+  background-image: url(/assets/austin_tx.png);
+  background-size: cover;
+  color: white;
+}
+.charlotte-card {
+  background-image: url(/assets/charlotte_nc.png);
+  background-size: cover;
+  color: white;
+}
+.chicago-card {
+  background-image: url(/assets/chicago_il.png);
+  background-size: cover;
+  color: white;
+}
+.cincinatti-card {
+  background-image: url(/assets/cincinnati_oh.png);
+  background-size: cover;
+  color: white;
+}
+.dallas-card {
+  background-image: url(/assets/dallas_tx.png);
+  background-size: cover;
+  color: white;
+}
+
+/*Steps*/
+.num {
+  font-size: 60px;
+  color: #fff;
+  text-shadow: 1px 1px 0 #d38003, -1px -1px 0 #d38003, 1px -1px 0 #d38003,
+    -1px 1px 0 #d38003, 1px 1px 0 #d38003;
+  top: 20px;
+  position: relative;
+  padding-right: 15px;
+  cursor: default;
+}
+
+/* app-add */
+
+.app-back {
+  background: linear-gradient(
+    90deg,
+    #833ab4 0,
+    #e8e45e 0,
+    #72bb4f 63%,
+    #8dc442 88%,
+    #aed044 100%
+  );
+}
+.app-container {
+  min-height: 370px;
+  position: relative;
+}
+.app-image-container {
+  position: relative;
+}
+
+.app-image {
+  content: "";
+  background: url(/assets/rc-app.png) no-repeat;
+  display: block;
+  width: 360px;
+  height: 350px;
+  position: absolute;
+  float: left;
+  right: 0;
+  bottom: 0;
+}
+
+.app-text-container {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.itunes {
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 3px;
+  background-image: url(/assets/app-download.png);
+  background-repeat: no-repeat;
+  background-position: -23px -22px;
+  height: 51px;
+  width: 158px;
+}
+
+.google {
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 3px;
+  background-image: url(/assets/app-download.png);
+  background-repeat: no-repeat;
+  background-position: -23px -115px;
+  height: 51px;
+  width: 178px;
+}
+
+/*Carousel Item*/
+.carousel-inner {
+  display: flex;
+  width: 90%;
+  overflow: hidden;
+}
+.carousel-item {
+  margin-right: 0;
+  flex: 0 0 calc(100% / 3);
+  display: block;
+}
+.shadow {
+  background-color: var(--grey);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+@media (min-width: 768px) {
+  .carousel-item1 {
+    margin-right: 0;
+    flex: 0 0 calc(100% / 3);
+  }
+  .carousel-inner {
+    display: flex;
+  }
+}
+.carousel-inner {
+  padding: 1em;
+}
+
+/*rent for*/
+
+.btn-rent {
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+.btn-rent:hover {
+  background-color: var(--green);
+  color: white;
+}
+
+.rent-tab {
+  width: 100%;
+}
+
+.rent-p {
+  font-size: 0.9rem;
+}
+
+/*footer*/
+
+.lista-footer h6 {
+  font-size: 18px;
+}
+
+.lista-footer ul li {
+  font-size: 14px;
+}
+.footer-container {
+  padding-top: 35px;
+  border-top: 1px solid var(--grey);
+}
+
+.lista-footer ul li:hover {
+  text-decoration: underline;
+}
+.logo-footer {
+  background: url(/assets/home-icons.gif) -10px -10px no-repeat;
+  width: 175px;
+  height: 65px;
+  margin-top: 2px;
+}
+.footer-fa {
+  background: url(/assets/home-icons.gif) no-repeat;
+  width: 23px;
+  height: 41px;
+  background-position: -162px -95px;
+  margin-top: 3px;
+}
+
+.footer-ins {
+  background: url(/assets/home-icons.gif) no-repeat;
+  width: 32px;
+  height: 32px;
+  background-position: -61px -246px;
+  margin-top: 3px;
+}
+
+.hr-container {
+  position: relative;
+}
+
+.hr {
+  opacity: 1;
+  background-color: var(--grey);
+}
+
+.hr-logo {
+  width: 104px;
+  height: 45px;
+  display: block;
+  background: url(/assets/rc-icon-footer.png);
+  position: absolute;
+  left: 50%;
+  margin-left: -55px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: -23px;
+}
+
+/* MOBILE CAROUSEL*/
+
+.carousel-li {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child {
+  left: 0px;
+}
+.wrapper i:last-child {
+  right: 0px;
+}
+
+/*Second slider*/
+.wrapper2 {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+.wrapper2 i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper2 i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper2 i:first-child {
+  left: 0px;
+}
+.wrapper2 i:last-child {
+  right: 0px;
+}
+
+.carouselM {
+  overflow-x: hidden;
+}
+
+.carousel2 {
+  overflow-x: hidden;
+}
+
+.carouselM.draggin {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel2.draggin {
+  cursor: grab;
+  user-select: none;
+}
+
+/* NAV TABS*/
+.nav-button {
+  background-color: white;
+  border: 0;
+  box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.nav-button:hover {
+  background-color: var(--grey);
+}
+.nav-button.active {
+  border: 2px solid var(--darkGrey);
+  background-color: var(--grey);
+}
+
+@media (min-width: 576px) {
+  .h2-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .h2-text {
+    font-size: 2rem;
+  }
+  .app-text-container {
+    width: 50%;
+    padding-left: 45px;
+  }
+  .app-container-flex {
+    justify-content: space-between;
+  }
+  .rent-tab {
+    width: 50%;
+  }
+  .safe-title {
+    font-size: 1rem;
+  }
+
+  .safe-btn {
+    font-size: 0.8rem;
+  }
+  .icon-point {
+    width: 59px;
+  }
+  .icon-store {
+    width: 84px;
+  }
+}
+
+@media (min-width: 992px) {
+  .h2-text {
+    font-size: 2.2rem;
+  }
+  .safe-title {
+    font-size: 1.5rem;
+  }
+  .safe-btn {
+    font-size: 1rem;
+  }
+  body::before {
+    content: "LG";
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

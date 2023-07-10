@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      RENT CÁFE - Browse apartments and houses for rent, check prices, view
+      property details, find the perfect place and submit your rental
+      application with RentCafe.
+    </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&family=Mulish:ital,wght@0,200;0,400;0,500;0,600;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script src="/script.js"></script>
+  </head>
+  <body class="d-flex flex-column">
+    <!-- NAV BAR-->
+    <nav class="navbar py-0">
+      <div class="container-fluid pt-4 pb-3 px-0 px-sm-1 px-md-5">
+        <a href="#" class="navbar-brand logo-container"
+          ><img
+            class="logo-image"
+            src="/assets/rc-logo-grey-2x.png"
+            alt="rent cafe"
+        /></a>
+        <button
+          type="button"
+          class="btn rounded-pill mx-0 mx-md-5 py-2 fw-bold btn-nav"
+        >
+          Login
+        </button>
+      </div>
+    </nav>
+
+    <!--HERO BANNER-->
+    <header class="mt-2 mb-5 header-back">
+      <div
+        class="container-fluid d-flex flex-column home-hero justify-content-center gap-5"
+      >
+        <h1 class="fw-light home-title text-center pb-5">
+          Rent Easy, Rest Easy
+        </h1>
+        <div class="col">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control text-grey"
+              placeholder="Enter a location, apartment type (studio, pet-friendly...)"
+              aria-label="Enter a location, apartment type (studio, pet-friendly...)"
+              aria-describedby="button-addon2"
+            />
+            <button class="btn search-button" type="button" id="button-addon2">
+              <div class="icon-search"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--MAIN BANNER-->
+    <main class="d-flex flex-column flex-wrap gap-5 pb-5 overflow-hidden">
+      <!--Safest section-->
+      <section id="safest-way" class="container-lg">
+        <div class="d-flex flex-column flex-wrap gap-2">
+          <div
+            class="d-flex pt-5 flex-wrap gap-3 justify-content-center align-items-center"
+          >
+            <div class="icon-house"></div>
+            <h2 class="m-0 section-title h2-text">The Safest Way to Search</h2>
+          </div>
+          <p
+            class="text-black text-left text-md-center fs-6 fs-md-5 lh-base pt-5"
+          >
+            RentCafe.com delivers the safest apartment search experience on the
+            web. <br />Apartment listings directly from top property managers,
+            pricing and availability updated daily, and your information
+            <br />immediately delivered to the property!
+          </p>
+          <div class="container-lg">
+            <div class="row">
+              <div class="col-4 d-none d-md-block">
+                <div class="card tab-budget tab-height">
+                  <div class="card-body d-flex flex-column p-0 p-lg-2">
+                    <div class="d-flex justify-content-center gap-2 py-3 px-2">
+                      <div class="icon-calc"></div>
+                      <h4 class="card-title text-aqua safe-title">
+                        Figure Out Your<br />
+                        Rent Budget
+                      </h4>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn rounded-pill btn-safest mx-5 py-2 fw-bold mb-2 safe-btn"
+                    >
+                      Rent Calulator
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 d-none d-md-block">
+                <div class="card tab-near tab-height">
+                  <div class="card-body d-flex flex-column p-0 p-lg-2">
+                    <div class="d-flex justify-content-center gap-2 py-3 px-2">
+                      <div class="icon-point"></div>
+                      <h4 class="card-title text-white safe-title">
+                        Discover Apartments <br />Near You
+                      </h4>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn rounded-pill btn-safest mx-5 py-2 fw-bold mb-2 safe-btn"
+                    >
+                      Apartments Near Me
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 d-none d-md-block">
+                <div class="card tab-storage tab-height">
+                  <div class="card-body d-flex flex-column p-0 p-lg-2">
+                    <div class="d-flex justify-content-center gap-2 py-3 px-2">
+                      <div class="icon-store"></div>
+                      <h4 class="card-title text-aqua safe-title">
+                        Find Storage Units <br />
+                        Near You
+                      </h4>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn rounded-pill btn-safest mx-5 py-2 fw-bold mb-2 safe-btn"
+                    >
+                      Storage Units Near Me
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mobile Hidden tab-->
+      <div class="container-fluid px-0">
+        <div class="row">
+          <div class="col d-sm-block d-md-none">
+            <div class="card tab-near">
+              <div class="card-body d-flex flex-column gap-2">
+                <div class="d-flex justify-content-center gap-2 py-3">
+                  <div class="icon-point"></div>
+                  <h4 class="card-title text-white">
+                    Discover Apartments <br />Near You
+                  </h4>
+                </div>
+                <button
+                  type="button"
+                  class="btn rounded-pill btn-safest mx-5 py-2 fw-bold mb-2"
+                >
+                  Apartments Near Me
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Popular Cities-->
+      <section id="pop-cities" class="container-lg mt-5">
+        <div class="d-flex flex-column flex-wrap gap-4">
+          <div
+            class="d-flex flex-wrap gap-3 justify-content-center align-items-center mb-3"
+          >
+            <div class="icon-rent"></div>
+            <h2 class="m-0 section-title h2-text">
+              Find Apartments in Popular U.S. Cities
+            </h2>
+          </div>
+          <div class="row">
+            <div class="col-4 d-none d-md-block">
+              <div class="atlanta-card py-2">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4"
+                >
+                  <h2 class="m-0 fw-bold">ATLANTA</h2>
+                  <h2 class="m-0">APARTMENTS</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 d-none d-md-block">
+              <div class="austin-card py-2">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4"
+                >
+                  <h2 class="m-0 fw-bold">AUSTIN</h2>
+                  <h2 class="m-0">APARTMENTS</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 d-none d-md-block">
+              <div class="charlotte-card py-2">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4"
+                >
+                  <h2 class="m-0 fw-bold">CHARLOTTE</h2>
+                  <h2 class="m-0">APARTMENTS</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4 d-none d-md-block">
+              <div class="chicago-card py-2">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4"
+                >
+                  <h2 class="m-0 fw-bold">CHICAGO</h2>
+                  <h2 class="m-0">APARTMENTS</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 d-none d-md-block">
+              <div class="cincinatti-card py-2">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4"
+                >
+                  <h2 class="m-0 fw-bold">CINCINATTI</h2>
+                  <h2 class="m-0">APARTMENTS</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 d-none d-md-block">
+              <div class="dallas-card py-2">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4"
+                >
+                  <h2 class="m-0 fw-bold">DALLAS</h2>
+                  <h2 class="m-0">APARTMENTS</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--MOBILE CAROUSEL-->
+
+        <div class="wrapper d-flex justify-content-center d-block d-md-none">
+          <i id="left" class="fa-solid fa-angle-left bti"></i>
+          <div class="container overflow-hidden px-0">
+            <ul class="carouselM d-flex gap-2 p-0">
+              <li class="atlanta-card py-4 px-2 carousel-li">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4 px-2"
+                >
+                  <h3 class="m-0 fw-bold">ATLANTA</h3>
+                  <h3 class="m-0">APARTMENTS</h3>
+                </div>
+              </li>
+              <li class="austin-card py-4 px-2 carousel-li">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4 px-2"
+                >
+                  <h3 class="m-0 fw-bold">AUSTIN</h3>
+                  <h3 class="m-0">APARTMENTS</h3>
+                </div>
+              </li>
+              <li class="charlotte-card py-4 px-2 carousel-li">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4 px-2"
+                >
+                  <h3 class="m-0 fw-bold">CHARLOTTE</h3>
+                  <h3 class="m-0">APARTMENTS</h3>
+                </div>
+              </li>
+              <li class="chicago-card py-4 px-2 carousel-li">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4 px-2"
+                >
+                  <h3 class="m-0 fw-bold">CHICAGO</h3>
+                  <h3 class="m-0">APARTMENTS</h3>
+                </div>
+              </li>
+              <li class="cincinatti-card py-4 px-2 carousel-li">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4 px-2"
+                >
+                  <h3 class="m-0 fw-bold">CINCINATTI</h3>
+                  <h3 class="m-0">APARTMENTS</h3>
+                </div>
+              </li>
+              <li class="dallas-card py-4 px-2 carousel-li">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4"
+                >
+                  <h2 class="m-0 fw-bold">DALLAS</h2>
+                  <h2 class="m-0">APARTMENTS</h2>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <i id="right" class="fa-solid fa-angle-right bti"></i>
+        </div>
+      </section>
+
+      <!--STEPS-->
+      <section id="steps" class="container-lg">
+        <div class="d-none d-md-flex">
+          <div class="p-0">
+            <div
+              class="d-flex flex-column gap-2 justify-content-center py-2 px-2"
+            >
+              <div class="py-4">
+                <h4 class="text-grey">
+                  <span class="num">1</span>Find Apartments for Rent
+                </h4>
+              </div>
+              <div>
+                <p class="fs-6 text-dark-grey">
+                  Featuring hundreds of thousands of apartments and houses for
+                  rent, RentCafe.com makes it easy for you to find your perfect
+                  home. Check prices, see photo displays, floor plans,
+                  amenities, and more!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-0">
+            <div
+              class="d-flex flex-column gap-2 justify-content-center py-2 px-2"
+            >
+              <div class="py-4">
+                <h4 class="text-grey">
+                  <span class="num">2</span>Secure Leases
+                </h4>
+              </div>
+              <div>
+                <p class="fs-6 text-dark-grey">
+                  Secure your lease quickly and hassle-free, online or
+                  in-person. With RentCafe.com, you can check real-time
+                  availability, contact properties, submit rental applications,
+                  and receive approval notifications.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-0">
+            <div
+              class="d-flex flex-column gap-2 justify-content-center py-2 px-2"
+            >
+              <div class="py-4">
+                <h4 class="text-grey"><span class="num">3</span>Rest Easy</h4>
+              </div>
+              <div>
+                <p class="fs-6 text-dark-grey">
+                  It’s good to be home! On RentCafe.com you can make secure rent
+                  payments, view balances, submit maintenance requests, get
+                  community news, and renew your lease — all under one roof.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NAV TAB MOBILE-->
+
+        <div class="tab-content d-block d-md-none" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="home"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+          >
+            <div
+              class="d-flex flex-column gap-2 justify-content-center py-2 px-2"
+            >
+              <div class="pb-4 text-center">
+                <h4 class="text-grey">
+                  <span class="num">1</span>Find Apartments for Rent
+                </h4>
+              </div>
+              <div>
+                <p class="fs-6 text-dark-grey">
+                  Featuring hundreds of thousands of apartments and houses for
+                  rent, RentCafe.com makes it easy for you to find your perfect
+                  home. Check prices, see photo displays, floor plans,
+                  amenities, and more!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="profile"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+          >
+            <div
+              class="d-flex flex-column gap-2 justify-content-center py-2 px-2"
+            >
+              <div class="pb-4 text-center">
+                <h4 class="text-grey">
+                  <span class="num">2</span>Secure Leases
+                </h4>
+              </div>
+              <div>
+                <p class="fs-6 text-dark-grey">
+                  Secure your lease quickly and hassle-free, online or
+                  in-person. With RentCafe.com, you can check real-time
+                  availability, contact properties, submit rental applications,
+                  and receive approval notifications.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="contact"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <div
+              class="d-flex flex-column gap-2 justify-content-center py-2 px-2"
+            >
+              <div class="pb-4 text-center">
+                <h4 class="text-grey"><span class="num">3</span>Rest Easy</h4>
+              </div>
+              <div>
+                <p class="fs-6 text-dark-grey">
+                  It’s good to be home! On RentCafe.com you can make secure rent
+                  payments, view balances, submit maintenance requests, get
+                  community news, and renew your lease — all under one roof.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul
+          class="nav d-block d-md-none d-flex justify-content-center gap-4 pt-2"
+          id="myTab"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active nav-button"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            ></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link nav-button"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#profile"
+              type="button"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+            ></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link nav-button"
+              id="contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#contact"
+              type="button"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+            ></button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Mobile Hidden tab-->
+      <div class="container-fluid px-0">
+        <div class="row">
+          <div class="col d-sm-block d-md-none">
+            <div class="card tab-budget">
+              <div class="card-body d-flex flex-column gap-2">
+                <div class="d-flex justify-content-center gap-2 py-3">
+                  <div class="icon-calc"></div>
+                  <h4 class="card-title text-aqua">
+                    Figure Out Your<br />
+                    Rent Budget
+                  </h4>
+                </div>
+                <button
+                  type="button"
+                  class="btn rounded-pill btn-safest mx-5 py-2 fw-bold mb-2"
+                >
+                  Rent Calulator
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- APP AD-->
+
+      <section id="app-add" class="container-lg">
+        <div class="row row-cols-1">
+          <div class="col pb-5">
+            <div
+              class="d-flex flex-wrap gap-3 justify-content-center align-items-center"
+            >
+              <div class="icon-app"></div>
+              <h2 class="m-0 section-title h2-text">
+                Get the Rental You Want - Fast and Free!
+              </h2>
+            </div>
+          </div>
+          <div class="col app-back">
+            <div class="app-container d-flex">
+              <div
+                class="d-flex flex-column app-text-container py-4 app-container-flex"
+              >
+                <div class="d-flex flex-column">
+                  <p class="fw-bold">
+                    On the move? The RentCafe.com app helps you find your next
+                    great apartment quickly. Anytime. Anywhere.
+                  </p>
+                  <p>
+                    Download the RentCafe.com apartment search app now from
+                    iTunes and Google Play and get instant access to rental
+                    listings nearby or across the US.
+                  </p>
+                </div>
+                <div
+                  class="d-flex justify-content-center justify-content-md-start gap-4"
+                >
+                  <a href="#" class="itunes"></a>
+                  <a href="#" class="google"></a>
+                </div>
+              </div>
+              <div class="app-image d-none d-md-block"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Rent for-->
+      <section id="rent-for" class="container-lg">
+        <div
+          class="d-flex flex-column flex-md-row gap-5 justify-content-center"
+        >
+          <div class="d-flex flex-column gap-4 rent-tab">
+            <div class="d-flex flex-column">
+              <h3 class="text-grey pt-3">RentCafe for Residents</h3>
+              <h5 class="text-grey pb-3">
+                You're home! Enjoy 24/7 resident services
+              </h5>
+              <p class="rent-p">
+                RentCafe.com helps you save time and manage your new rental
+                effortlessly, from anywhere. Log into your Resident Portal, make
+                and keep track of rent payments, maintenance requests, and lease
+                renewals.<br /><br />
+                Have your apartment information and services at the tip of your
+                fingers. <br /><br />
+                Download the free RentCafe.com Resident App, available now on
+                iTunes and Google Play.
+              </p>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button class="btn rounded-pill mx-5 py-2 fw-bold px-4 btn-rent">
+                Resident Login
+              </button>
+            </div>
+          </div>
+          <div class="d-flex flex-column gap-4 rent-tab">
+            <div class="d-flex flex-column">
+              <h3 class="text-grey pt-3">RentCafe for Property Managers</h3>
+              <h5 class="text-grey pb-3">
+                List on RentCafe.com and connect with your residents
+              </h5>
+              <p class="rent-p">
+                Gain increased exposure, more leads, and better chances to fill
+                vacancies with qualified residents!
+                <br />
+                <br />
+                Generate higher resident retention and satisfaction with online
+                rental applications, approvals, and lease renewals, while making
+                your residents’ life easier.
+                <br />
+                <br />
+                With RentCafe.com fully integrated with Yardi Voyager and
+                RentCafeCRM, property management has never been this easy!
+              </p>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button class="btn rounded-pill mx-5 py-2 fw-bold px-4 btn-rent">
+                Manager Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mobile Hidden tab-->
+      <div class="container-fluid px-0">
+        <div class="row">
+          <div class="col d-sm-block d-md-none">
+            <div class="card tab-storage">
+              <div class="card-body d-flex flex-column gap-2">
+                <div class="d-flex justify-content-center gap-2 py-3">
+                  <div class="icon-store"></div>
+                  <h4 class="card-title text-aqua">
+                    Find Storage Units <br />
+                    Near You
+                  </h4>
+                </div>
+                <button
+                  type="button"
+                  class="btn rounded-pill btn-safest mx-5 py-2 fw-bold mb-2"
+                >
+                  Storage Units Near Me
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Self storage-->
+      <section id="self-storage" class="container-lg">
+        <div class="row row-cols-1">
+          <div class="col pb-5 pt-3">
+            <div
+              class="d-flex flex-wrap gap-3 justify-content-center align-items-center"
+            >
+              <div class="icon-storage"></div>
+              <h2 class="m-0 section-title h2-text">
+                Find Self-Storage Right Here on RentCafe!
+              </h2>
+            </div>
+          </div>
+          <div class="col pb-4">
+            <div
+              class="d-flex flex-wrap gap-3 justify-content-center align-items-center"
+            >
+              <p class="fs-5 text-grey text-center fw-semibold">
+                Search and find storage units near you - it's easy as
+                one-two-three!<br />
+                Check out the facilities in your area, decide on the best unit
+                size, compare prices, and then contact the storage provider.<br />
+                With more than 25,000 storage listings across the country,
+                finding your ideal storage unit on RentCafe is a breeze!
+              </p>
+            </div>
+          </div>
+          <div class="col d-none d-md-block">
+            <div class="row">
+              <div class="col-4">
+                <div class="atlanta-card py-2">
+                  <div
+                    class="d-flex flex-column gap-2 justify-content-center align-items-center py-4"
+                  >
+                    <h2 class="m-0 fw-bold">ATLANTA</h2>
+                    <h2 class="m-0">SELF-STORAGE</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="austin-card py-2">
+                  <div
+                    class="d-flex flex-column gap-2 justify-content-center align-items-center py-4"
+                  >
+                    <h2 class="m-0 fw-bold">MIAMI</h2>
+                    <h2 class="m-0">SELF-STORAGE</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="charlotte-card py-2">
+                  <div
+                    class="d-flex flex-column gap-2 justify-content-center align-items-center py-4"
+                  >
+                    <h2 class="m-0 fw-bold">PHOENIX</h2>
+                    <h2 class="m-0">SELF-STORAGE</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOBILE SLIDER -->
+        <div class="wrapper2 d-flex justify-content-center d-block d-md-none">
+          <i id="left1" class="fa-solid fa-angle-left bti"></i>
+          <div class="container overflow-hidden px-0">
+            <ul class="carousel2 d-flex gap-2 p-0">
+              <li class="atlanta-card py-4 px-2 carousel-li">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4 px-4"
+                >
+                  <h2 class="m-0 fw-bold">ATLANTA</h2>
+                  <h2 class="m-0">SELF-STORAGE</h2>
+                </div>
+              </li>
+              <li class="austin-card py-4 px-2 carousel-li">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4 px-4"
+                >
+                  <h2 class="m-0 fw-bold">MIAMI</h2>
+                  <h2 class="m-0">SELF-STORAGE</h2>
+                </div>
+              </li>
+              <li class="charlotte-card py-4 px-2 carousel-li">
+                <div
+                  class="d-flex flex-column gap-2 justify-content-center align-items-center py-4 px-4"
+                >
+                  <h2 class="m-0 fw-bold">PHOENIX</h2>
+                  <h2 class="m-0">SELF-STORAGE</h2>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <i id="right1" class="fa-solid fa-angle-right bti"></i>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section id="footer">
+        <div class="container-lg">
+          <div class="row footer-container">
+            <div class="col-12 col-md-3">
+              <div class="d-flex flex-column gap-3 gap-md-5 pb-5 pb-md-0">
+                <div
+                  class="d-flex justify-content-center justify-content-md-start"
+                >
+                  <a href="#" class="logo-footer"></a>
+                </div>
+                <div class="d-flex align-items-center gap-3 pt-3">
+                  <h5>Follow us</h5>
+                  <a href="#" class="footer-fa"></a>
+                  <a href="#" class="footer-ins"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col lista-footer">
+              <h6 class="fw-bold pb-2">Get to know us</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item">About Us</li>
+                <li class="nav-item">Advertise with RentCafe.com</li>
+                <li class="nav-item">RentCafe.com Canada</li>
+                <li class="nav-item">Privacy Policy</li>
+                <li class="nav-item">Terms</li>
+                <li class="nav-item">Accessibility Statement</li>
+              </ul>
+            </div>
+            <div class="col lista-footer">
+              <h6 class="fw-bold pb-2">Quick links</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item">FAQ</li>
+                <li class="nav-item">Contact us</li>
+                <li class="nav-item">Sitemaps</li>
+                <li class="nav-item">Blog</li>
+              </ul>
+            </div>
+            <div class="col lista-footer">
+              <h6 class="fw-bold pb-2">Yardi Companies & Affiliates</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item">Yardi Systems</li>
+                <li class="nav-item">Yardi Matrix</li>
+                <li class="nav-item">Yardi Kube</li>
+                <li class="nav-item">Yardi Breeze</li>
+                <li class="nav-item">Yardi Corom</li>
+                <li class="nav-item">StorageCafe</li>
+                <li class="nav-item">CommercialCafe</li>
+                <li class="nav-item">CommercialSearch</li>
+                <li class="nav-item">Point2</li>
+                <li class="nav-item">PropertyShark</li>
+                <li class="nav-item">CommercialEdge</li>
+                <li class="nav-item">MultiHousing News</li>
+                <li class="nav-item">Commercial Property</li>
+                <li class="nav-item">Executive 42Floors</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container-lg">
+        <div class="hr-container">
+          <div class="hr-logo"></div>
+          <hr class="hr" />
+        </div>
+
+        <div
+          class="d-flex flex-column gap-2 justify-content-center align-items-center py-4"
+        >
+          <p class="fs-6">© 2023 - Yardi Systems Inc. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
